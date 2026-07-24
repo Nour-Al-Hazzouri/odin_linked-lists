@@ -13,8 +13,8 @@ class LinkedList {
     node.value = value;
     if (this.Head === null) this.head = node;
     else {
-      const tempNode = this.Head;
-      while (tempNode.next !== null) tempNode = tempNode.next;
+      let tempNode = this.Head;
+      while (tempNode.Next !== null) tempNode = tempNode.Next;
       tempNode.next = node;
     }
   }
@@ -23,9 +23,19 @@ class LinkedList {
     node.value = value;
     if (this.Head === null) this.head = node;
     else {
-      node.next = this.Head.next;
+      node.next = this.Head.Next;
       this.Head.next = node;
     }
+  }
+  size() {
+    if (this.Head === null) return 0;
+    let tempList = this.Head;
+    let counter = 1;
+    while (tempList.Next !== null) {
+      tempList = tempList.Next;
+      counter += 1;
+    }
+    return counter;
   }
 }
 export default LinkedList;

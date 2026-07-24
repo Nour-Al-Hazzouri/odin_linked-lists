@@ -6,6 +6,7 @@ const list = new LinkedList();
 const list2 = new LinkedList();
 const node = new Node();
 const node2 = new Node();
+const node3 = new Node();
 // test list and node functionality
 node.value = 10;
 node2.value = 20;
@@ -19,3 +20,9 @@ node2.value = 20;
 // console.log(list2.Head);
 // list2.prepend(node2);
 // console.log(list.Head);
+
+// test size()
+list.append(node);
+list.append(node2);
+list.prepend(node3);
+console.log(list.size());
