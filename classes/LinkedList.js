@@ -2,7 +2,7 @@ import Node from "./Node.js";
 
 class LinkedList {
   #headNode = null;
-  set head(node) {
+  set headValue(node) {
     this.#headNode = node;
   }
   get Head() {
@@ -11,7 +11,7 @@ class LinkedList {
   append(value) {
     const node = new Node();
     node.value = value;
-    if (this.Head === null) this.head = node;
+    if (this.Head === null) this.headValue = node;
     else {
       let tempNode = this.Head;
       while (tempNode.Next !== null) tempNode = tempNode.Next;
@@ -21,7 +21,7 @@ class LinkedList {
   prepend(value) {
     const node = new Node();
     node.value = value;
-    if (this.Head === null) this.head = node;
+    if (this.Head === null) this.headValue = node;
     else {
       node.next = this.Head.Next;
       this.Head.next = node;
@@ -36,6 +36,10 @@ class LinkedList {
       counter += 1;
     }
     return counter;
+  }
+  head() {
+    if (this.Head === null) return;
+    return this.Head.Value;
   }
 }
 export default LinkedList;
