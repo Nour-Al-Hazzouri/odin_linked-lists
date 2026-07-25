@@ -41,5 +41,11 @@ class LinkedList {
     if (this.Head === null) return;
     return this.Head.Value;
   }
+  tail() {
+    if (this.Head === null) return;
+    let tempList = this.Head;
+    while (tempList.Next !== null) tempList = tempList.Next;
+    return tempList.Value;
+  }
 }
 export default LinkedList;

@@ -10,6 +10,7 @@ const node3 = new Node();
 // test list and node functionality
 node.value = 10;
 node2.value = 20;
+node3.value = 30;
 
 // test append(value)
 // console.log(list.Head);
@@ -30,3 +31,9 @@ node2.value = 20;
 // test head()
 // list.append(node.Value);
 // console.log(list.head());
+
+// test tale()
+// list.append(node.Value);
+// list.append(node2.Value);
+// list.append(node3.Value);
+// console.log(list.tail());
