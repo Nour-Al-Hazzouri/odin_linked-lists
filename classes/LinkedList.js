@@ -84,5 +84,15 @@ class LinkedList {
     }
     return -1;
   }
+  toString() {
+    let tempList = this.Head;
+    if (tempList === null) return "";
+    let accumulator = "";
+    while (tempList !== null) {
+      accumulator += `( ${tempList.Value} ) -> `;
+      tempList = tempList.Next;
+    }
+    return accumulator + null;
+  }
 }
 export default LinkedList;

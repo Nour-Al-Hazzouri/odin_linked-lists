@@ -54,7 +54,13 @@ const node3 = 30;
 // console.log(list.contains(30));
 
 // test findIndex(value)
-list.append(10);
-list.append(20);
-list.append(30);
-console.log(list.findIndex(30));
+// list.append(10);
+// list.append(20);
+// list.append(30);
+// console.log(list.findIndex(30));
+
+// test toString()
+// list.append(10);
+// list.append(20);
+// list.append(30);
+// console.log(list.toString());
