@@ -3,24 +3,19 @@ import Node from "./classes/Node.js";
 
 // universal list and node
 const list = new LinkedList();
-const list2 = new LinkedList();
-const node = new Node();
-const node2 = new Node();
-const node3 = new Node();
-// test list and node functionality
-node.value = 10;
-node2.value = 20;
-node3.value = 30;
+const node = 10;
+const node2 = 20;
+const node3 = 30;
 
 // test append(value)
 // console.log(list.Head);
-// list.append(node.Value);
-// console.log(list.Head.Value);
+// list.append(node);
+// console.log(list.Head);
 
-// test prepend(value)
-// console.log(list2.Head);
-// list.prepend(node2.Value);
-// console.log(list.Head.Next.Value);
+// list prepend(value)
+// console.log(list.Head);
+// list.prepend(node);
+// console.log(list.Head);
 
 // test size()
 // list.append(node);
@@ -29,11 +24,18 @@ node3.value = 30;
 // console.log(list.size());
 
 // test head()
-// list.append(node.Value);
+// list.append(node);
+// list.append(node2);
 // console.log(list.head());
 
-// test tale()
-// list.append(node.Value);
-// list.append(node2.Value);
-// list.append(node3.Value);
+// test tail()
+// list.append(node);
+// list.append(node2);
+// list.append(node3);
 // console.log(list.tail());
+
+//test at(index)
+// list.append(10);
+// list.append(20);
+// list.append(30);
+// console.log(list.at(3));
