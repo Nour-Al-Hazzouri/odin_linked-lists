@@ -39,3 +39,10 @@ const node3 = 30;
 // list.append(20);
 // list.append(30);
 // console.log(list.at(3));
+
+// test pop()
+// list.append(10);
+// list.append(30);
+// console.log("1. " + list.head());
+// console.log("2. " + list.pop());
+// console.log("3. " + list.head());

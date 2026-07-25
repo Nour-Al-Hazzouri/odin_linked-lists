@@ -58,5 +58,11 @@ class LinkedList {
     }
     return;
   }
+  pop() {
+    if (this.Head === null) return;
+    const nodeValue = this.Head.Value;
+    this.headValue = this.Head.Next;
+    return nodeValue;
+  }
 }
 export default LinkedList;
