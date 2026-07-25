@@ -73,5 +73,16 @@ class LinkedList {
     }
     return false;
   }
+  findIndex(value) {
+    let tempList = this.Head;
+    if (tempList === null) return -1;
+    let counter = 0;
+    while (tempList !== null) {
+      if (tempList.Value === value) return counter;
+      tempList = tempList.Next;
+      counter += 1;
+    }
+    return -1;
+  }
 }
 export default LinkedList;
