@@ -64,5 +64,14 @@ class LinkedList {
     this.headValue = this.Head.Next;
     return nodeValue;
   }
+  contains(value) {
+    let tempList = this.Head;
+    if (tempList === null) return false;
+    while (tempList !== null) {
+      if (tempList.Value === value) return true;
+      tempList = tempList.Next;
+    }
+    return false;
+  }
 }
 export default LinkedList;
