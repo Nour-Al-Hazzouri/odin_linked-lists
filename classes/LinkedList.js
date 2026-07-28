@@ -121,5 +121,33 @@ class LinkedList {
       counter += 1;
     }
   }
+  removeAt(index) {
+    let tempList = this.Head;
+    let previousNode = this.Head;
+    let counter = 0;
+    while (tempList !== null) {
+      tempList = tempList.Next;
+      counter += 1;
+    }
+    if (index < 0 || index > counter) throw RangeError;
+    tempList = this.Head;
+    counter = 0;
+    while (tempList !== null) {
+      if (counter === index && index === 0) {
+        this.headValue = previousNode.Next;
+        tempList = tempList.Next;
+      } else if (counter === index && tempList.Next !== null)
+        previousNode.next = tempList.Next;
+      else if (counter === index && tempList.Next === null)
+        previousNode.next = null;
+
+      if (tempList === previousNode) tempList = tempList.Next;
+      else {
+        tempList = tempList.Next;
+        previousNode = previousNode.Next;
+      }
+      counter += 1;
+    }
+  }
 }
 export default LinkedList;
