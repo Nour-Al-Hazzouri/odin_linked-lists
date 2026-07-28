@@ -8,16 +8,16 @@ const node2 = 20;
 const node3 = 30;
 
 // test append(value)
-// console.log(list.Head);
 // list.append(node);
 // list.append(node2);
 // list.append(50);
 // console.log(list.toString());
 
 // list prepend(value)
-// console.log(list.Head);
 // list.prepend(node);
-// console.log(list.Head);
+// list.prepend(node2);
+// list.prepend(50);
+// console.log(list.toString());
 
 // test size()
 // list.append(node);

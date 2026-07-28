@@ -21,10 +21,11 @@ class LinkedList {
   prepend(value) {
     const node = new Node();
     node.value = value;
-    if (this.Head === null) this.headValue = node;
+    let tempList = this.Head;
+    if (tempList === null) this.headValue = node;
     else {
-      node.next = this.Head.Next;
-      this.Head.next = node;
+      node.next = tempList.Next;
+      tempList.next = node;
     }
   }
   size() {
