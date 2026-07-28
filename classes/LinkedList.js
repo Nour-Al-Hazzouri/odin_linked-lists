@@ -13,9 +13,9 @@ class LinkedList {
     node.value = value;
     if (this.Head === null) this.headValue = node;
     else {
-      let tempNode = this.Head;
-      while (tempNode.Next !== null) tempNode = tempNode.Next;
-      tempNode.next = node;
+      let tempList = this.Head;
+      while (tempList.Next !== null) tempList = tempList.Next;
+      tempList.next = node;
     }
   }
   prepend(value) {

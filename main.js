@@ -10,7 +10,9 @@ const node3 = 30;
 // test append(value)
 // console.log(list.Head);
 // list.append(node);
-// console.log(list.Head);
+// list.append(node2);
+// list.append(50);
+// console.log(list.toString());
 
 // list prepend(value)
 // console.log(list.Head);
@@ -73,8 +75,8 @@ const node3 = 30;
 // console.log(list.toString());
 
 // test removeAt(index)
-list.append(10);
-list.append(20);
-list.append(30);
-list.removeAt(2);
-console.log(list.toString());
+// list.append(10);
+// list.append(20);
+// list.append(30);
+// list.removeAt(2);
+// console.log(list.toString());
