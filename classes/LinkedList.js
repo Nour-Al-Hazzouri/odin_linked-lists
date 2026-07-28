@@ -51,8 +51,8 @@ class LinkedList {
   }
   at(index) {
     let tempList = this.Head;
-    if (tempList === null) return;
     let counter = 0;
+    if (tempList === null) return;
     while (tempList !== null) {
       if (counter === index) return tempList.Value;
       tempList = tempList.Next;
