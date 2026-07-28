@@ -44,8 +44,8 @@ class LinkedList {
     return tempList.Value;
   }
   tail() {
-    if (this.Head === null) return;
     let tempList = this.Head;
+    if (tempList === null) return;
     while (tempList.Next !== null) tempList = tempList.Next;
     return tempList.Value;
   }

@@ -26,14 +26,14 @@ const node3 = 30;
 // console.log(list.size());
 
 // test head()
-list.append(node);
-list.append(node2);
-console.log(list.head());
+// list.append(node);
+// list.append(node2);
+// console.log(list.head());
 
 // test tail()
 // list.append(node);
-// list.append(node2);
 // list.append(node3);
+// list.append(node2);
 // console.log(list.tail());
 
 //test at(index)
