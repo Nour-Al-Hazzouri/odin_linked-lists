@@ -101,13 +101,6 @@ class LinkedList {
     let tempList = this.Head;
     let counter = 0;
     let innerCounter = 0;
-    while (tempList !== null) {
-      tempList = tempList.Next;
-      counter += 1;
-    }
-    if (index < 0 || index > counter) throw RangeError;
-    counter = 0;
-    tempList = this.Head;
     let node;
     while (tempList !== null) {
       if (counter === index) {
@@ -123,6 +116,7 @@ class LinkedList {
       tempList = tempList.Next;
       counter += 1;
     }
+    if (index < 0 || index > counter) throw RangeError;
   }
   removeAt(index) {
     let tempList = this.Head;
