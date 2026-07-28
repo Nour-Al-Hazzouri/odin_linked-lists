@@ -89,8 +89,8 @@ class LinkedList {
   }
   toString() {
     let tempList = this.Head;
-    if (tempList === null) return "";
     let accumulator = "";
+    if (tempList === null) return "";
     while (tempList !== null) {
       accumulator += `( ${tempList.Value} ) -> `;
       tempList = tempList.Next;
