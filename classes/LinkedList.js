@@ -29,8 +29,8 @@ class LinkedList {
     }
   }
   size() {
-    if (this.Head === null) return 0;
     let tempList = this.Head;
+    if (tempList === null) return 0;
     let counter = 1;
     while (tempList.Next !== null) {
       tempList = tempList.Next;
