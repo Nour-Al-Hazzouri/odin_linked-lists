@@ -94,5 +94,32 @@ class LinkedList {
     }
     return accumulator + null;
   }
+  insertAt(index, ...values) {
+    let tempList = this.Head;
+    let counter = 0;
+    let innerCounter = 0;
+    while (tempList !== null) {
+      tempList = tempList.Next;
+      counter += 1;
+    }
+    if (index < 0 || index > counter) throw RangeError;
+    counter = 0;
+    tempList = this.Head;
+    let node;
+    while (tempList !== null) {
+      if (counter === index) {
+        while (innerCounter !== values.length) {
+          node = new Node();
+          node.value = values[innerCounter];
+          node.next = tempList.Next;
+          tempList.next = node;
+          tempList = tempList.Next;
+          innerCounter += 1;
+        }
+      }
+      tempList = tempList.Next;
+      counter += 1;
+    }
+  }
 }
 export default LinkedList;

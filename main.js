@@ -64,3 +64,10 @@ const node3 = 30;
 // list.append(20);
 // list.append(30);
 // console.log(list.toString());
+
+// test insert(index, ...values)
+list.append(10);
+list.append(20);
+list.append(30);
+list.insertAt(2, 5, 10, 15);
+console.log(list.toString());
