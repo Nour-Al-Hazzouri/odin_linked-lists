@@ -13,23 +13,24 @@ class LinkedList {
     node.value = value;
     if (this.Head === null) this.headValue = node;
     else {
-      let tempNode = this.Head;
-      while (tempNode.Next !== null) tempNode = tempNode.Next;
-      tempNode.next = node;
+      let tempList = this.Head;
+      while (tempList.Next !== null) tempList = tempList.Next;
+      tempList.next = node;
     }
   }
   prepend(value) {
     const node = new Node();
     node.value = value;
-    if (this.Head === null) this.headValue = node;
+    let tempList = this.Head;
+    if (tempList === null) this.headValue = node;
     else {
-      node.next = this.Head.Next;
-      this.Head.next = node;
+      node.next = tempList.Next;
+      tempList.next = node;
     }
   }
   size() {
-    if (this.Head === null) return 0;
     let tempList = this.Head;
+    if (tempList === null) return 0;
     let counter = 1;
     while (tempList.Next !== null) {
       tempList = tempList.Next;
@@ -38,19 +39,20 @@ class LinkedList {
     return counter;
   }
   head() {
-    if (this.Head === null) return;
-    return this.Head.Value;
+    let tempList = this.Head;
+    if (tempList === null) return;
+    return tempList.Value;
   }
   tail() {
-    if (this.Head === null) return;
     let tempList = this.Head;
+    if (tempList === null) return;
     while (tempList.Next !== null) tempList = tempList.Next;
     return tempList.Value;
   }
   at(index) {
     let tempList = this.Head;
-    if (tempList === null) return;
     let counter = 0;
+    if (tempList === null) return;
     while (tempList !== null) {
       if (counter === index) return tempList.Value;
       tempList = tempList.Next;
@@ -59,9 +61,10 @@ class LinkedList {
     return;
   }
   pop() {
-    if (this.Head === null) return;
-    const nodeValue = this.Head.Value;
-    this.headValue = this.Head.Next;
+    let tempList = this.Head;
+    if (tempList === null) return;
+    const nodeValue = tempList.Value;
+    this.headValue = tempList.Next;
     return nodeValue;
   }
   contains(value) {
@@ -75,8 +78,8 @@ class LinkedList {
   }
   findIndex(value) {
     let tempList = this.Head;
-    if (tempList === null) return -1;
     let counter = 0;
+    if (tempList === null) return -1;
     while (tempList !== null) {
       if (tempList.Value === value) return counter;
       tempList = tempList.Next;
@@ -86,8 +89,8 @@ class LinkedList {
   }
   toString() {
     let tempList = this.Head;
-    if (tempList === null) return "";
     let accumulator = "";
+    if (tempList === null) return "";
     while (tempList !== null) {
       accumulator += `( ${tempList.Value} ) -> `;
       tempList = tempList.Next;
@@ -98,13 +101,6 @@ class LinkedList {
     let tempList = this.Head;
     let counter = 0;
     let innerCounter = 0;
-    while (tempList !== null) {
-      tempList = tempList.Next;
-      counter += 1;
-    }
-    if (index < 0 || index > counter) throw RangeError;
-    counter = 0;
-    tempList = this.Head;
     let node;
     while (tempList !== null) {
       if (counter === index) {
@@ -120,6 +116,7 @@ class LinkedList {
       tempList = tempList.Next;
       counter += 1;
     }
+    if (index < 0 || index > counter) throw RangeError;
   }
   removeAt(index) {
     let tempList = this.Head;

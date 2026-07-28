@@ -8,14 +8,16 @@ const node2 = 20;
 const node3 = 30;
 
 // test append(value)
-// console.log(list.Head);
 // list.append(node);
-// console.log(list.Head);
+// list.append(node2);
+// list.append(50);
+// console.log(list.toString());
 
 // list prepend(value)
-// console.log(list.Head);
 // list.prepend(node);
-// console.log(list.Head);
+// list.prepend(node2);
+// list.prepend(50);
+// console.log(list.toString());
 
 // test size()
 // list.append(node);
@@ -30,15 +32,15 @@ const node3 = 30;
 
 // test tail()
 // list.append(node);
-// list.append(node2);
 // list.append(node3);
+// list.append(node2);
 // console.log(list.tail());
 
 //test at(index)
 // list.append(10);
 // list.append(20);
 // list.append(30);
-// console.log(list.at(3));
+// console.log(list.at(1));
 
 // test pop()
 // list.append(10);
@@ -66,15 +68,15 @@ const node3 = 30;
 // console.log(list.toString());
 
 // test insertAt(index, ...values)
-// list.append(10);
-// list.append(20);
-// list.append(30);
-// list.insertAt(2, 5, 10, 15);
-// console.log(list.toString());
-
-// test removeAt(index)
 list.append(10);
 list.append(20);
 list.append(30);
-list.removeAt(2);
+list.insertAt(1, 5, 10, 15);
 console.log(list.toString());
+
+// test removeAt(index)
+// list.append(10);
+// list.append(20);
+// list.append(30);
+// list.removeAt(2);
+// console.log(list.toString());
