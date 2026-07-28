@@ -78,8 +78,8 @@ class LinkedList {
   }
   findIndex(value) {
     let tempList = this.Head;
-    if (tempList === null) return -1;
     let counter = 0;
+    if (tempList === null) return -1;
     while (tempList !== null) {
       if (tempList.Value === value) return counter;
       tempList = tempList.Next;
