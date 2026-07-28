@@ -61,9 +61,10 @@ class LinkedList {
     return;
   }
   pop() {
-    if (this.Head === null) return;
-    const nodeValue = this.Head.Value;
-    this.headValue = this.Head.Next;
+    let tempList = this.Head;
+    if (tempList === null) return;
+    const nodeValue = tempList.Value;
+    this.headValue = tempList.Next;
     return nodeValue;
   }
   contains(value) {
