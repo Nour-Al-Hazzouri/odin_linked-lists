@@ -39,8 +39,9 @@ class LinkedList {
     return counter;
   }
   head() {
-    if (this.Head === null) return;
-    return this.Head.Value;
+    let tempList = this.Head;
+    if (tempList === null) return;
+    return tempList.Value;
   }
   tail() {
     if (this.Head === null) return;
